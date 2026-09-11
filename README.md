@@ -4,6 +4,11 @@ A full-stack ERP and CRM operations portal developed for the Fundstrom Full Stac
 
 The application is designed for a wholesale/distribution business to manage customers, products, inventory, stock movements, sales challans, and role-based access from a single web portal.
 
+## 🔗 Links
+
+- **Live Demo:** [fundstrom-erp](https://main.d2ejvrp62zka7e.amplifyapp.com/login)
+- **GitHub Repository:** [SubratGupta0506/fundstrom-erp](https://github.com/SubratGupta0506/fundstrom-erp)
+
 ---
 
 ## Features
@@ -98,7 +103,7 @@ The application is designed for a wholesale/distribution business to manage cust
 
 ---
 
-## Technology Stack
+## 🛠️ Technology Stack
 
 ### Frontend
 
@@ -107,29 +112,37 @@ The application is designed for a wholesale/distribution business to manage cust
 - Vite
 - React Router
 - Axios
-- HTML
-- CSS
+- HTML5
+- CSS3
 
 ### Backend
 
 - Node.js
+- Express.js
 - TypeScript
-- Express
 - REST APIs
-- Zod validation
-- JWT authentication
+- Zod
+- JWT
 - bcryptjs
+- CORS
+- dotenv
 
-### Database
+### Database & ORM
 
 - PostgreSQL
 - Prisma ORM
+- Prisma Migrations
+- `@prisma/adapter-pg`
+- `pg`
 
-### Development
+### Tools & Deployment
 
-- npm
 - Git
 - GitHub
+- VS Code
+- Postman
+- AWS Amplify
+- Render
 
 ---
 

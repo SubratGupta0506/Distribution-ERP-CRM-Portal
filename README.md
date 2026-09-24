@@ -1,13 +1,19 @@
-# Fundstrom ERP + CRM Operations Portal
+# Distribution ERP + CRM Portal
 
-A full-stack ERP and CRM operations portal developed for the Fundstrom Full Stack Developer Assessment.
-
-The application is designed for a wholesale/distribution business to manage customers, products, inventory, stock movements, sales challans, and role-based access from a single web portal.
+A full-stack ERP and CRM operations portal built for wholesale and distribution businesses to manage customers, products, inventory, stock movements, sales challans, and role-based access from a single web portal.
 
 ## 🔗 Links
 
-- **Live Demo:** [fundstrom-erp](https://main.d2ejvrp62zka7e.amplifyapp.com/login)
+- **Live Demo:** [Distribution ERP + CRM Portal](https://main.d2ejvrp62zka7e.amplifyapp.com/login)
 - **GitHub Repository:** [SubratGupta0506/fundstrom-erp](https://github.com/SubratGupta0506/fundstrom-erp)
+
+---
+
+## Overview
+
+Fundstrom ERP is a role-based operations portal I designed and built end-to-end — from relational schema design through authentication, business logic, and deployment. It covers the core workflows a small distribution business needs day to day: managing customers and products, tracking inventory movements, and issuing sales challans, all gated behind role-specific permissions.
+
+The goal was to build something close to a real production tool rather than a toy CRUD app — so the project includes proper validation, negative-stock prevention, draft/confirm/cancel state machines for challans, and snapshotted data integrity for historical records.
 
 ---
 
@@ -28,77 +34,47 @@ The application is designed for a wholesale/distribution business to manage cust
 
 ### Customer CRM
 
-- Add customers
-- Edit customers
-- Search customers
+- Add, edit, and search customers
 - Filter by customer type and status
-- Customer types:
-  - Retail
-  - Wholesale
-  - Distributor
-- Customer statuses:
-  - Lead
-  - Active
-  - Inactive
-- Follow-up date
-- Notes
+- Customer types: Retail, Wholesale, Distributor
+- Customer statuses: Lead, Active, Inactive
+- Follow-up date and notes
 - Business and GST information
-- Customer detail view
-- Pagination
+- Customer detail view with pagination
 
 ### Product Management
 
-- Add products
-- Edit products
-- Search products
+- Add, edit, and search products
 - Filter by category
 - SKU management
-- Unit price
-- Current stock
-- Minimum stock threshold
+- Unit price, current stock, and minimum stock threshold
 - Warehouse and location information
 - Low-stock identification
 - Pagination
 
 ### Inventory & Stock Management
 
-- Stock IN movements
-- Stock OUT movements
-- Stock movement history
-- Movement reason tracking
-- Created-by tracking
-- Timestamp tracking
-- Product-level movement history
+- Stock IN and Stock OUT movements
+- Stock movement history with reason and created-by tracking
+- Timestamped, product-level movement history
 - Prevents negative stock
 - Insufficient-stock validation
 
 ### Sales Challans
 
-- Create sales challans
-- Select customers
-- Add multiple products
-- Specify product quantities
-- Automatically generate challan numbers
-- Draft challans
-- Confirm challans
-- Cancel challans
-- Product snapshot information stored with challan items
+- Create sales challans with multiple products and quantities
+- Automatically generated challan numbers
+- Draft, confirm, and cancel workflow
+- Product snapshot stored with each challan item for historical accuracy
 - Total quantity calculation
-- Stock deduction on confirmation
-- Prevents confirmation when stock is insufficient
-- Search and filter challans
-- Challan detail view
+- Stock deduction on confirmation, blocked if stock is insufficient
+- Search, filter, and detail view
 
 ### Dashboard
 
-- Total customers
-- Total products
-- Low-stock count
-- Draft challans
-- Confirmed challans
-- Cancelled challans
-- Recent challans
-- Recent stock movements
+- Total customers, total products, low-stock count
+- Draft, confirmed, and cancelled challan counts
+- Recent challans and recent stock movements
 - Role-based navigation
 
 ---
@@ -106,29 +82,25 @@ The application is designed for a wholesale/distribution business to manage cust
 ## 🛠️ Technology Stack
 
 ### Frontend
-
 - React
 - TypeScript
 - Vite
 - React Router
 - Axios
-- HTML5
-- CSS3
+- HTML5 / CSS3
 
 ### Backend
-
 - Node.js
 - Express.js
 - TypeScript
 - REST APIs
-- Zod
+- Zod (validation)
 - JWT
 - bcryptjs
 - CORS
 - dotenv
 
 ### Database & ORM
-
 - PostgreSQL
 - Prisma ORM
 - Prisma Migrations
@@ -136,13 +108,11 @@ The application is designed for a wholesale/distribution business to manage cust
 - `pg`
 
 ### Tools & Deployment
-
-- Git
-- GitHub
+- Git / GitHub
 - VS Code
 - Postman
-- AWS Amplify
-- Render
+- AWS Amplify (frontend)
+- Render (backend)
 
 ---
 
@@ -323,7 +293,7 @@ http://localhost:5173
 
 ## Demo Accounts
 
-The application contains four demo accounts for assessment and demonstration purposes.
+The application includes four demo accounts for evaluation purposes.
 
 | Role      | Email                     | Password       |
 |-----------|----------------------------|----------------|
@@ -355,8 +325,7 @@ The login interface provides demo-role shortcuts for easier testing.
 The backend implements:
 
 - Request validation using Zod
-- Authentication errors
-- Authorization errors
+- Authentication and authorization errors
 - Invalid ID validation
 - Duplicate SKU protection
 - Duplicate/invalid data handling
@@ -390,27 +359,16 @@ npm run build
 npm run preview
 ```
 
-## Assessment Scope
+## What This Project Demonstrates
 
-This project was developed according to the Fundstrom Full Stack Developer Assessment requirements, covering:
-
-- Authentication
-- Role-based authorization
-- Customer CRM
-- Product management
-- Inventory management
-- Stock movement logging
-- Sales challans
-- Dashboard
-- REST APIs
-- Validation
-- Error handling
-- Pagination
-- Search/filter functionality
-- Responsive frontend
-- PostgreSQL database
-- Prisma ORM
+- Full-stack ownership: relational schema design, REST API development, and a React frontend, built and deployed independently
+- Role-based access control implemented at both the UI and API layers
+- State management using React Context API and useReducer for auth/session handling
+- Business-rule-driven backend logic (stock integrity, challan lifecycle, data snapshotting)
+- Production-style practices: validation, centralized error handling, and environment-based configuration
+- Deployed frontend (AWS Amplify) and backend (Render) as a working, publicly accessible application
 
 ## Author
 
-Developed as part of the Fundstrom Full Stack Developer Assessment.
+**Subrat Gupta**
+[LinkedIn](https://www.linkedin.com/in/subrat-gupta-656a45354) · [GitHub](https://github.com/SubratGupta0506) · [Portfolio](https://subratgupta0506.github.io/SubratGupta/)
